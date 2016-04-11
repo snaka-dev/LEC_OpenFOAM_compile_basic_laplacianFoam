@@ -29,6 +29,13 @@ http://www.openfoam.org/docs/user/compiling-applications.php
 
 　ソースコード中のインクルード `#include` では，その部分にヘッダファイル `*.H` に記載した内容がそのまま転載される。
 
+### 使われている共有ライブラリの確認
+
+実行時に利用される共有ライブラリは，ファイル名に拡張子「so」が付いている。下記コマンドを実行すると，laplacianFoam 実行時に使われるライブラリが表示される。
+
+````
+ldd $FOAM_APPBIN/laplacianFoam
+````
 
 ## 2. laplacianFoam 関連ディレクトリ
 ソルバ・ソースコード ディレクトリ
